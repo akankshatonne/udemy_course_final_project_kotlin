@@ -7,7 +7,7 @@ import java.util.*
 
 @Entity
 @Table(name = "series")
-class Series(@Id
+data class Series(@Id
              @GeneratedValue
              val uuid: UUID,
              @Column
