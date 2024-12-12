@@ -19,15 +19,15 @@ type Model @connection @key(fields: "uuid") {
     series          : Series
 }
 
-#
-#type ModelPagination {
-#    modelConnection         : ModelConnection
-#    page                    : Int!
-#    size                    : Int!
-#    totalPage               : Int!
-#    totalElement            : Long!
-#}
-#
+
+type ModelPagination {
+    modelConnection         : ModelConnection
+    page                    : Int!
+    size                    : Int!
+    totalPage               : Int!
+    totalElement            : Long!
+}
+
 #type ModelSimple {
 #    uuid            : String!
 #    name            : String!

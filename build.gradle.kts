@@ -37,7 +37,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("com.netflix.graphql.dgs:graphql-dgs-extended-scalars")
 	implementation("org.flywaydb:flyway-core:9.22.3")
-
+	implementation("com.netflix.graphql.dgs:graphql-dgs-pagination")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
@@ -83,8 +83,7 @@ tasks.generateJava {
 	"NegativeFloat"    			to "kotlin.Double",
 	"ManufacturerConnection"    to "graphql.relay.SimpleListConnection<Manufacturer>",
 	"SeriesConnection"    		to "graphql.relay.SimpleListConnection<Series>",
-	"ModelConnection"    		to "graphql.relay.Connection<com.carmazing.product.datasource.entity.Model>",
-		"URL" to "com.carmazing.product.scalars.URLScalar"
+	"ModelConnection"    		to "graphql.relay.Connection<com.carmazing.product.datasource.entity.Models>",
 	)
 }
 
